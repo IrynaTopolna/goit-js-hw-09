@@ -18,6 +18,7 @@ function onFormSubmit(evt) {
     const position = i + 1;
 
     createPromise({ position, delay }).then(onSuccess).catch(onFailure);
+    evt.currentTarget.reset();
   }
 }
 
